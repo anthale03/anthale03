@@ -1,0 +1,117 @@
+mohi2018@DESKTOP-0ED5H27:~$ git clone https://github.com/anthale03/anthale03.git
+Cloning into 'anthale03'...
+warning: You appear to have cloned an empty repository.
+mohi2018@DESKTOP-0ED5H27:~$ ls -l
+total 4
+drwxr-xr-x 3 mohi2018 mohi2018 4096 Jan 24 12:53 anthale03
+mohi2018@DESKTOP-0ED5H27:~$ ls -ltr
+total 4
+drwxr-xr-x 3 mohi2018 mohi2018 4096 Jan 24 12:53 anthale03
+mohi2018@DESKTOP-0ED5H27:~$ cd anthale03
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ touch abc
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ ls -ltr
+total 0
+-rw-r--r-- 1 mohi2018 mohi2018 0 Jan 24 12:54 abc
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git add .
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ vi abc
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git add .
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git commit -m "hello"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <mohi2018@DESKTOP-0ED5H27.localdomain>) not allowed
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git config --global user.email "anthale_dinesh@yahoo.co.in"
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git config --global user.name "dinesh+maddy"
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git commit -m "hello"
+[master (root-commit) ca8a7f2] hello
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abc
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push
+Username for 'https://github.com': anthale_dinesh@yahoo.co.in
+Password for 'https://anthale_dinesh@yahoo.co.in@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/anthale03/anthale03.git/'
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push
+Username for 'https://github.com': anthale_dinesh@yahoo.co.in
+Password for 'https://anthale_dinesh@yahoo.co.in@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/anthale03/anthale03.git/'
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push
+Username for 'https://github.com': anthale03
+Password for 'https://anthale03@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/anthale03/anthale03.git/'
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push
+Username for 'https://github.com': anthale03
+Password for 'https://anthale03@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/anthale03/anthale03.git/'
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push
+Username for 'https://github.com': anthale03
+Password for 'https://anthale03@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 224 bytes | 224.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/anthale03/anthale03.git
+ * [new branch]      master -> master
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git checkout -b Test
+Switched to a new branch 'Test'
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ ls -l
+total 4
+-rw-r--r-- 1 mohi2018 mohi2018 18 Jan 24 12:55 abc
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git status
+On branch Test
+nothing to commit, working tree clean
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ vi abc
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git add .
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git commit
+Aborting commit due to empty commit message.
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git commit -m "in Test branch"
+[Test 12d800c] in Test branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push
+fatal: The current branch Test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin Test
+
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ ^C
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git push --set-upstream origin Test
+Username for 'https://github.com': anthale03
+Password for 'https://anthale03@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'Test' on GitHub by visiting:
+remote:      https://github.com/anthale03/anthale03/pull/new/Test
+remote:
+To https://github.com/anthale03/anthale03.git
+ * [new branch]      Test -> Test
+Branch 'Test' set up to track remote branch 'Test' from 'origin'.
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
+mohi2018@DESKTOP-0ED5H27:~/anthale03$ git merge
+Already up to date.
+mohi2018@DESKTOP-0ED5H27:~/anthale03$
